@@ -11,8 +11,11 @@ npm create vite@latest Client
 cd Client
 npm install
 npm install axios
+npm install react-router-dom
 npm run dev
 ```
+
+- Tailwind css CDN used
 
 ### Server side
 
