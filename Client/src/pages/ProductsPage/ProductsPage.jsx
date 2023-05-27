@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Cards } from "../../components/Cards/Cards";
 import { useProductsList } from "../../Hooks/useProductsList";
+import { Link } from "react-router-dom";
 
 export const ProductsPage = () => {
   const { productsList } = useProductsList();
@@ -14,7 +15,9 @@ export const ProductsPage = () => {
         {productsList.map((product) => {
           return (
             <>
-              <Cards product={product} />
+              <Link to={`/${product.id}`}>
+                <Cards key={product.id} product={product} />
+              </Link>
             </>
           );
         })}

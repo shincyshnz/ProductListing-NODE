@@ -15,7 +15,7 @@ app.get("/api/products/:id", (req, res) => {
     const { id } = req.params;
     const reqProduct = productsList.filter((product) => product.id == id
     );
-    res.status(200).json(reqProduct);
+    res.status(200).json(reqProduct[0]);
 });
 
 const PORT = 3006;

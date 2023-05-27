@@ -24,7 +24,7 @@ export const SearchInput = () => {
       />
       {inputValue && (
         <button onClick={clearSearch}>
-          <img src="/searchbar-images/close.png" alt="close" />
+          <img src="searchbar-images/close.png" alt="close" />
         </button>
       )}
     </div>

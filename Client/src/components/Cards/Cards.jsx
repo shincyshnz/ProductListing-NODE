@@ -5,15 +5,11 @@ import { Ripple, initTE } from "tw-elements";
 initTE({ Ripple });
 
 export const Cards = ({ product }) => {
-  const { id, title, description, price, discountPercentage, category } =
-    product;
+  const { title, description, price, discountPercentage, category } = product;
   const discountedPrice = Math.ceil(price - (price * discountPercentage) / 100);
 
   return (
-    <div
-      className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 w-64 m-1"
-      key={id}
-    >
+    <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 w-64 m-1">
       <div
         className="relative overflow-hidden bg-cover bg-no-repeat"
         data-te-ripple-init
